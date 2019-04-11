@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
+
                 for (int i = 0; i <= 100; i++) {
                     final int currentProgressCount = i;
                     try {
@@ -43,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             waveLoadingView.setProgressValue(currentProgressCount);
-                            if(currentProgressCount < 50){
+                            if(currentProgressCount < 55){
                             waveLoadingView.setBottomTitle(String.format("%d%%", currentProgressCount));
                             waveLoadingView.setCenterTitle("");
                             waveLoadingView.setTopTitle("");
                             }
-                            else if(currentProgressCount < 80){
+                            else if(currentProgressCount < 85){
                                 waveLoadingView.setBottomTitle("");
                                 waveLoadingView.setCenterTitle(String.format("%d%%", currentProgressCount));
                                 waveLoadingView.setTopTitle("");
