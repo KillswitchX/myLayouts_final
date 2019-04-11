@@ -26,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
         waveLoadingView.setProgressValue(0);
 
+
+
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -43,11 +52,12 @@ public class MainActivity extends AppCompatActivity {
                     mHandler.post(new Runnable() {
                         @Override
                         public void run() {
+                            waveLoadingView.startAnimation();
                             waveLoadingView.setProgressValue(currentProgressCount);
                             if(currentProgressCount < 55){
-                            waveLoadingView.setBottomTitle(String.format("%d%%", currentProgressCount));
-                            waveLoadingView.setCenterTitle("");
-                            waveLoadingView.setTopTitle("");
+                                waveLoadingView.setBottomTitle(String.format("%d%%", currentProgressCount));
+                                waveLoadingView.setCenterTitle("");
+                                waveLoadingView.setTopTitle("");
                             }
                             else if(currentProgressCount < 85){
                                 waveLoadingView.setBottomTitle("");
@@ -70,40 +80,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
 
-
-
-        //seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-//            @Override
-//            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-//                waveLoadingView.setProgressValue(progress);
-//
-//                if(progress < 50){
-//                    waveLoadingView.setBottomTitle(String.format("%d%%", progress));
-//                    waveLoadingView.setCenterTitle("");
-//                    waveLoadingView.setTopTitle("");
-//                }
-//                else if(progress < 80){
-//                    waveLoadingView.setBottomTitle("");
-//                    waveLoadingView.setCenterTitle(String.format("%d%%", progress));
-//                    waveLoadingView.setTopTitle("");
-//                }
-//                else{
-//                    waveLoadingView.setBottomTitle("");
-//                    waveLoadingView.setCenterTitle("");
-//                    waveLoadingView.setTopTitle(String.format("%d%%", progress));
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onStartTrackingTouch(SeekBar seekBar) {
-//
-//            }
-//
-//            @Override
-//            public void onStopTrackingTouch(SeekBar seekBar) {
-//
-//            }
-//        });
     }
 }
