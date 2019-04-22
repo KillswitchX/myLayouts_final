@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Results"
+            android:textSize="45sp"
+            android:textColor="#890E10"
+            android:gravity="center_horizontal"
+
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="0dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Safe Candy just finished scanning device"
+            android:textSize="27sp"
+            android:textColor="#890E10"
+            android:gravity="center_horizontal"
+
+            android:fontFamily="roboto"
+
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/risk"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your device is at risk"
+            android:textSize="27sp"
+            android:textColor="#890E10"
+            android:gravity="center_horizontal"
+
+            android:fontFamily="roboto"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="DISPLAY"
+            android:textSize="20sp"
+            android:textColor="#FFF"
+
+            />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
