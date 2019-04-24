@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RemoveAppsAnimation"></activity>
+        <activity android:name=".ScanResults"></activity>
+        <activity android:name=".RemoveAppsAnimation" />
         <activity android:name=".ScanResultSafe" />
         <activity android:name=".ScanResultFound" />
         <activity android:name=".MainActivity">
